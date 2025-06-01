@@ -152,7 +152,7 @@ export function setupConvexAuth({
       }).action(action, args);
     },
     verbose: options?.verbose,
-    logger: options?.logger,
+    logger: typeof options?.logger === 'boolean' ? undefined : options?.logger,
   };
 
   // Create the auth client and set up context

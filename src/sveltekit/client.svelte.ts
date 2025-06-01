@@ -55,7 +55,7 @@ export function createSvelteKitAuthClient({
     authenticatedCall: call,
     unauthenticatedCall: call,
     verbose: options?.verbose,
-    logger: options?.logger,
+    logger: typeof options?.logger === 'boolean' ? undefined : options?.logger,
   };
 
   // Initialize the Convex client if not provided
